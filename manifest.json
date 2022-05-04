@@ -1,0 +1,20 @@
+{
+    "name": "Page Refresh",
+    "version": "1.0.0",
+    "description": "Refreshes the page automatically in frequent intervals",
+    "manifest_version": 3,
+    
+    "background": {
+        "service_worker": "script.js"
+      },
+    "author": "Neeraj PY",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Page Refresh"
+    }
+  
+    
+}
+
+
+
