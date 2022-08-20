@@ -74,7 +74,7 @@ chrome.runtime.onMessage.addListener(
       if (request.interval === "set"){
           
             myInterval = setInterval(() => {
-            const current_tab = browser.tabs.getCurrent();
+            const current_tab = chrome.tabs.getCurrent();
             current_tab.then(onGot, onError);
             reload(current_tab.tab_id); 
             }, 1000/(request.rte));
