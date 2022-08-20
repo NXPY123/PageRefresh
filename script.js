@@ -72,11 +72,11 @@ chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
       
       if (request.interval === "set"){
-            const current_tab = chrome.tabs.getCurrent();
+            
             myInterval = setInterval(() => {
             
-            current_tab.then(onGot, onError);
-            reload(current_tab.tab_id); 
+            
+            reload(request.tab_id); 
             }, 1000/(request.rte));
             
             sendResponse({interval:"created"});
