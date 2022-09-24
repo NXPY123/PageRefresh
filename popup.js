@@ -23,16 +23,6 @@ if(localStorage.getItem('submit_clicked')=='yes') //If state of popup was change
     
 }
 
-function onTabGot(tabInfo) {
-  console.log(tabInfo);
-}
-
-function onTabError(error) {
-  console.log(`Error: ${error}`);
-}
-
-
-
 
 function onError(error){ //if reload() returns error
     console.log(`Error: ${error}`);
@@ -59,14 +49,11 @@ function createButton(context,value,func) { //func to create button
 */
 function logTab(tabs)// promise of tab query
 {
-    /*
     let tab_id;
     for (let tab of tabs) {
         tab_id = tab.id;
-    }*/
-    const gettingCurrent =chrome.tabs.getCurrent();
-    gettingCurrent.then(onTabGot, onTabError);
-    localStorage.setItem('tabId',gettingCurrent.id);
+    }
+    localStorage.setItem('tabId',tab_id);
 }
 
 function onError(error) { // promise of tab query
