@@ -1,13 +1,3 @@
-function onGot(tabInfo) {
-  console.log(tabInfo);
-}
-
-
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
 
 
 
@@ -72,10 +62,8 @@ chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
       
       if (request.interval === "set"){
-            
+          
             myInterval = setInterval(() => {
-            
-            
             reload(request.tab_id); 
             }, 1000/(request.rte));
             
