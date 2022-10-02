@@ -1,0 +1,23 @@
+.container button {
+    font-weight: 600;
+    line-height: 1.7;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #a4133c;
+    color: #fff;
+    transition: all 0.3s ease-in;
+    font-size: 1.2rem;
+    padding: 0.4rem 1.8rem;
+    border-radius: 10px;   
+}
+
+.container button:hover {
+    background-color: #800f2f;
+}
+
+.container button:disabled {
+    background-color: #800f2f;
+    cursor: not-allowed;
+}
+
